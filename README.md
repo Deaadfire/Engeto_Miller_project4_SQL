@@ -6,6 +6,9 @@ Infomace o mzdách a cenách vybraných potravit pochází z **Portálu otevřen
 Data pro mzdy jsou dostupné v rozpětí let 2000-2021, pro ceny potravin poté pouze pro 2006-2018.  
 Pro zodpovězení otázek, týkající se zároveň mezd a cen, je směrodatné období 2006-2018, kdy jsou dostupná data pro obě kategorie.  
 
+Všechny potřebné data jsou v tabulkách, které lze najít v souboru **Miller_SQL_tables.sql.**  
+Zde najdete skript pro vytvoření dvou tabulek t_Jakub_Miller_project_SQL_primary_final a t_Jakub_Miller_project_SQL_secondary_final.  
+
 ## Výzkumné otázky ##
 Pro zodpovězení zkoumaných výzkumných otázek slouží dodatečné SQL skripty, které jsou dostupné v souboru **Miller_SQL_questions.sql**.  
 Pro lepší přehlednost / pochopení dat může každá otázka obsahovat více než jen 1 skript.    
@@ -92,3 +95,28 @@ Naopak nejvyšší rozdíl nárůstu mezd proti nárůstu cen potravin byl v roc
 Pomocné skripty:
 - Otázka č. 5, skript č. 1
 - Otázka č. 5, skript č. 2
+
+Tento skript nám vrací tabulku obsahující 4 hodnoty, které zde pro přehlednost více popíšu:
+- correlation_gdp_wages - udává hodnotu korelace mezi nárůstem mezd a hdp pro stejný rok
+- correlation_gdp_prices - udává hodnotu korelace mezi nárůstem cen potravin a hdp pro stejný rok
+- corr_gdp_to_next_wages - udává hodnotu korelaci mezi nárůstem hdp pro daný rok a nárůstem mezd pro rok následující
+- corr_gdp_to_next_price - udává hodnotu korelaci mezi nárůstem hdp pro daný rok a nárůstem cen potravin pro rok následující  
+
+**Korelace:**  
+- udává, jestli existuje závislost mezi hodnotami dvou prvků a jak silná tato závislost je
+- nabývá hodnot od 0-1, kde 0 značí nulovou závislost a 1 maximální závislost
+- pro náš případ to tedy znamená, že čím větší hodnota korelace mezi HDP a mzdami / cenami potravin, tím větší má změna HDP vliv na změnu mezd / cen potravin
+
+Z výsledků prvního skriptu můžeme soudit, že pro stejné období závislost mezi změnou HDP a mezd / cen potravin existuje, ale nabývá pouze hodnot 0.4296 pro mzdy a 0.48689 pro ceny potravin. Jedná se tedy o relativně slabou závislost. Dá se říct, že mzdy a ceny potravin do nějaké míry reagují na změnu HDP, ale není pravidlem, že když se změní jedno, změní se stejně i druhé.  
+Pro roky následující jsou výsledky pak jiné. Hodnota korelace u HDP a mezd následujícího roku je již vyšší 0.71895, což ukazuje na poměrně velkou závislost. Mzdy tedy opožděně reagují na změnu HDP s větší silou, ale opět to není přímo pravidlem, můžou nastat odchylky. Nejedná se o úplnou závislost. Naopak závislost mezi HDP a cenami potravin následujícího roku je téměř nulová 0.09173. To značí, že mezi těmito neexistuje téměř žádný vztah.  
+<img width="826" height="53" alt="image" src="https://github.com/user-attachments/assets/a2e29986-e249-45a8-8777-2466b44c441f" />  
+
+Druhý skript je především podpůrný, abychom se mohli podívat, jak se meziročně vyvíjí mzdy, ceny potravin a výše HDP.  
+Zde chybí meziroční data pro mzdy a ceny za rok 2006. Jelikož zkoumáme období 2006-2018, nemůžeme tedy získat meziroční změnu pro rok 2006, jelikož nemáme data za rok 2005. Pro HDP tyto data máme a jelikož porovnáváme i změnu HDP proti následujícímu roku, tak jsou data úplná.  
+<img width="865" height="276" alt="Q5_s2" src="https://github.com/user-attachments/assets/88e4fa85-5a0f-405f-a411-f7f0c15f8ef1" />  
+
+**Závěřem:**  
+- pro stejné roky: Změna HDP má určitý vliv na změnu výši mezd a cen potravin, tato závislost ale není nijak veliká (korelace mezd 0.4296 / cen potravin 0.48689). Mzdy a ceny potravin tedy reagují na změnu HDP, ale není to zdaleka pravidlem.
+- pro následující roky: Změná HDP má již větší vliv na vyši mezd v následujícím roce (korelace 0.71895). Změna HDP se tedy již více odráží na změně mezd v následujícím roce, ovšem stále to není úplná závislost, takže to není pravidlem. Mohou nastat odchylky.
+- pro následující roky: Naopak změna HDP nemá téměř žádný vliv na cenu potravin v následujícím roce (korelace 0.09173), vztah téměř neexistuje.
+
