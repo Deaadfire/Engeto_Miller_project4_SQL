@@ -1,4 +1,4 @@
--- Otázky č. 1: Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
+-- Otázka č. 1: Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
 
 -- Otázka č. 1, skript č. 1
 WITH salary_trend AS (
@@ -47,6 +47,8 @@ ORDER BY payroll_year;
 
 
 
+-- Otázka č. 2: Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
+
 -- Otázka č. 2, skript č. 1
 SELECT
     payroll_year,
@@ -64,6 +66,7 @@ ORDER BY payroll_year DESC, product_name;
 
 
 
+-- Otázka č. 3: Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)? 
 
 -- Otázka č. 3, skript č. 1
 WITH price_yearly_change AS ( 
@@ -100,6 +103,8 @@ ORDER BY product_name, payroll_year;
 
 
 
+
+-- Otázka č. 4: Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?  
 
 -- Otázka č. 4, skript č. 1
 WITH avg_yearly_values AS (
@@ -149,6 +154,8 @@ ORDER BY pprice_vs_wages_difference DESC;
 
 
 
+
+-- Otázka č. 5: Má výška HDP vliv na změny ve mzdách a cenách potravin? 
 
 -- Otázka č. 5, skript č. 1
 WITH avg_yearly_values AS (
