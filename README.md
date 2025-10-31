@@ -24,4 +24,4 @@ Pomocné skripty:
 
 První skript nám ukazuje seznam všech odvětví a kolikrát se za sledované obdbobí 2000-2021 průměrná mzda meziročně zvedla a kolikrát klesla.  
 Můžeme vidět, že v drtivé většině má každé odvětví tendenci meziročně růst. "Nejhůře" na tom je odvětví Těžba a dobývání, které kleslo celkově 4x za 21 let.  
-![Skript č.1](<img width="936" height="396" alt="image" src="https://github.com/user-attachments/assets/2fb40cf2-e9a3-41f4-8816-44078ddabf4e" />)
+![Skript č.1](<img width="936" height="396" alt="Q1_s1" src="https://github.com/user-attachments/assets/ff0a9d39-087b-43ac-8d90-5fe24812614f" />)
