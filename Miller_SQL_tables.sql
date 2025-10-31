@@ -43,3 +43,8 @@ SELECT
 FROM economies e
 JOIN countries c ON e.country = c.country
 WHERE continent = 'Europe' AND YEAR BETWEEN 2000 AND 2021       	
+
+
+-- Skript na následné smazání tabulek (v případě potřeby)
+DROP TABLE t_Jakub_Miller_project_SQL_primary_final;
+DROP TABLE t_Jakub_Miller_project_SQL_secondary_final;
