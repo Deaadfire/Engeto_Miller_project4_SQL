@@ -24,5 +24,13 @@ Pomocné skripty:
 
 První skript nám ukazuje seznam všech odvětví a kolikrát se za sledované obdbobí 2000-2021 průměrná mzda meziročně zvedla a kolikrát klesla.  
 Můžeme vidět, že v drtivé většině má každé odvětví tendenci meziročně růst. "Nejhůře" na tom je odvětví Těžba a dobývání, které kleslo celkově 4x za 21 let.  
-<img width="936" height="396" alt="Q1_s1" src="https://github.com/user-attachments/assets/0807ccd6-c2a9-41b0-94c6-53085357ee1a" />
+<img width="936" height="396" alt="Q1_s1" src="https://github.com/user-attachments/assets/0807ccd6-c2a9-41b0-94c6-53085357ee1a" />  
+
+Druhý skript nám pak přesně ukazuje jaké odvětví a v jakém roce mělo meziroční pokles mezd. Můžeme si všimnout, že největší pád byl v roce 2013,  
+kde celkově 11 odvětví zaznamenalo meziroční pokles mezd s největším dopadem na Peněžnictví a pojišťovnictví
+<img width="838" height="600" alt="Q2_s2" src="https://github.com/user-attachments/assets/1643c242-119b-4ee6-8ff5-aa901187a724" />  
+
+**Závěrem:**  
+Mzdy rostou stabilně ve všech odvětvích jen s malými odchylky. Ze zkoumaných 21 let mělo nejčetnější propad mezd odvětví Těžba a dobývání a to 4x.   
+Nejhorší rok pro vývoj mezd byl pak 2013, kdy meziročně kleslo 11 odvětví.
 
