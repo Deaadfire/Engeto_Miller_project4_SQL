@@ -17,6 +17,11 @@ Pro lepší přehlednost / pochopení dat může každá otázka obsahovat více
 4. Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?
 5. Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?  
 
-### Otázka č. 1 ###  
-- Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
-- Pomocné skripty: Otázka č. 1, skript č. 1;  Otázka č.1, skript č. 2
+### Otázka č. 1 - Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají? ###  
+Pomocné skripty:
+- Otázka č. 1, skript č. 1
+- Otázka č. 1, skript č. 2  
+
+První skript nám ukazuje seznam všech odvětví a kolikrát se za sledované obdbobí 2000-2021 průměrná mzda meziročně zvedla a kolikrát klesla.  
+Můžeme vidět, že v drtivé většině má každé odvětví tendenci meziročně růst. "Nejhůře" na tom je odvětví Těžba a dobývání, které kleslo celkově 4x za 21 let.  
+![Skript č.1](<img width="936" height="396" alt="image" src="https://github.com/user-attachments/assets/2fb40cf2-e9a3-41f4-8816-44078ddabf4e" />)
