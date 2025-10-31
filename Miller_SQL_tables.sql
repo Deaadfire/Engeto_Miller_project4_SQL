@@ -1,5 +1,5 @@
 -- Skript na vytvoření tabulky č. 1 obsahující data ohledně mezd a cen pro vybrané časové období
-CREATE TABLE t_Jakub_Miller_project_SQL_primary_final AS
+CREATE TABLE IF NOT EXISTS t_Jakub_Miller_project_SQL_primary_final AS
 WITH payroll_agg AS (
   SELECT
     p.industry_branch_code,
@@ -33,7 +33,7 @@ LEFT JOIN czechia_price_category cpc
        	
        	
 -- Skript na vytvoření tabulky č. 2 obashující data ohledně dostupných Evropských zemí pro shodné časové období jako tabulka č. 1       	
-CREATE TABLE t_Jakub_Miller_project_SQL_secondary_final as
+CREATE TABLE IF NOT EXISTS t_Jakub_Miller_project_SQL_secondary_final as
 SELECT 
 	e.country,
 	e.YEAR,
@@ -46,6 +46,7 @@ WHERE continent = 'Europe' AND YEAR BETWEEN 2000 AND 2021
 
 
 -- Skript na následné smazání tabulek (v případě potřeby)
-DROP TABLE t_Jakub_Miller_project_SQL_primary_final;
-DROP TABLE t_Jakub_Miller_project_SQL_secondary_final;
+DROP TABLE IF EXISTS t_Jakub_Miller_project_SQL_primary_final;
+DROP TABLE IF EXISTS t_Jakub_Miller_project_SQL_secondary_final;
+
 
